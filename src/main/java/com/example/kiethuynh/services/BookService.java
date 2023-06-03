@@ -11,22 +11,22 @@ import java.util.Optional;
 @Service
 public class BookService {
     @Autowired
-    private IBookRepository bookRepository;
+    private IBookRepository ibookRepository;
 
     public List<Book> getAllBooks(){
-        return bookRepository.findAll();
+        return ibookRepository.findAll();
     }
     public Book getBookById(Long id){
-        Optional<Book> optional = bookRepository.findById(id);
+        Optional<Book> optional = ibookRepository.findById(id);
         return optional.orElse(null);
     }
     public void addBook(Book book){
-        bookRepository.save(book);
+        ibookRepository.save(book);
     }
     public void updateBook(Book book){
-        bookRepository.save(book);
+        ibookRepository.save(book);
     }
     public void deleteBook(Long id){
-        bookRepository.deleteById(id);
+        ibookRepository.deleteById(id);
     }
 }
