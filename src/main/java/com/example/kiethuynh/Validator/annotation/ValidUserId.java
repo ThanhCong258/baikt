@@ -13,7 +13,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 @Target({TYPE, FIELD})
 @Retention(RUNTIME)
-@Constraint(validatedBy = ValidCategoryIdValidator.class)
+@Constraint(validatedBy = ValidUserIdValidator.class)
 public @interface ValidUserId {
     String message() default "Invalid User ID";
     Class<?>[] groups() default {};
